@@ -1,0 +1,6 @@
+# sleepingTA
+sleeping TA problem done in C
+
+The sleeping TA problem is where a TA holds office hours where he/she can provide help to other students.  However the TA's office only has room for his/her desk and one chair.  So the TA can only help one person at a time.  The TA does have 3 chiars in the waiting area.  If the Ta is currently helping a studen and anorther sudent comes in he can wait in the waiting room until the TA is free.  If there is no room in the waiting room the sturdent then would have to come back.  If there is no student waiting to be helped then the TA takes a nap. The sleeping TA problem uses POSIX mutex locks and semaphores to create a solution it does this by using the mutex locks to control the access to the chairs and keeps track of the number of waiting students.  The semaphore is used for signaling the TA if he is taking a nap and a student shows up.
+
+I choose this program because it involves a number of different things that was talked about in Operating class (Pthreads, POSIX locks and Semaphores).  I used Pthreads, one thread for each of the studens and one for the TA. I also used POSIX locks and Semaphores as described above to control the students and TA.  I also needed to create a sleep function to put the TA to sleep for a random period of time.  
